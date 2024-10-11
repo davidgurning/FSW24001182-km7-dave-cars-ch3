@@ -6,7 +6,7 @@ const router = require("./routes/index");
 const { errorHandler, notFoundURLHandler } = require("./middleware/errors");
 
 const app = express();
-const port = 4000;
+const port = process.env.PORT || 4000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
